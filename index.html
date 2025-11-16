@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta name="robots" content="noindex">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -146,7 +145,7 @@
         } */
 
         .containerLetreiro {
-            position: sticky;
+            /* position: sticky; */
             top: 0px;
             width: 100%;
             overflow-x: hidden;
@@ -159,6 +158,7 @@
             border-style: solid;
             padding: 20px 5px 20px 5px;
             border-left: none;
+            border-top: none;
             border-right: none;
             backdrop-filter: blur(10px);
             z-index: 100000;
@@ -189,7 +189,7 @@
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 00%, var(--dark) 90%);
             box-shadow: 0px 1500px 0 1500px var(--dark);
             width: 100%;
-            padding: 7rem 0 12rem 0;
+            padding: 8rem 0 13rem 0;
             background-size: cover;
             color: white;
 
@@ -197,10 +197,23 @@
 
         }
 
+        .nav-bar_container {
+            position: sticky;
+            top: 0px;
+            z-index: 5;
+            backdrop-filter: blur(10px);
+            width: 100%;
+            position: sticky;
+            border: solid 3px white;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-image: linear-gradient(to right, var(--purple) 0%, var(--orange) 100%) 1;
+        }
+
         .nav-bar {
             display: flex;
-            justify-content: flex-end;
-
+            justify-content: flex-end
         }
 
         .nav-button {
@@ -210,7 +223,7 @@
             border: 1px solid rgba(255, 255, 255, 0.7);
             text-align: center;
             border-radius: 2rem;
-            margin: 1rem .5rem;
+            margin: .8rem .5rem;
             backdrop-filter: blur(20px);
             transition: all .5s ease;
 
@@ -276,8 +289,8 @@
         }
 
         .about-container h2 {
-            width: 90%;
-            margin: 0 1rem 5rem 1rem;
+            width: 100%;
+            margin: 0 0rem 5rem 0rem;
             font-size: 2.5rem;
             font-weight: 700;
             line-height: 1.2;
@@ -328,6 +341,11 @@
         .about__card__logo span {
             color: #202020;
             font-size: 3rem;
+        }
+
+        .about-container__info-section {
+            font-size: 1.2rem;
+            line-height: 1.4;
         }
 
         .escadaHeader {
@@ -494,10 +512,10 @@
         .destaqueContainer {
             /* padding-bottom: 50px; */
             background-image: url(https://static-public.pages.hotmart.com/uploads/media/file/9103786/bg2.png);
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: left;
-            padding: 4rem 0 0 0;
+            padding: 2rem 0 0 0;
         }
 
         .profileDestaques {
@@ -571,7 +589,7 @@
         /* PALESTRANTES */
 
         .palestrantesContainer {
-            padding-bottom: 10px;
+            background-color: #202020;
             background-image: url(https://static-public.pages.hotmart.com/uploads/media/file/9103786/bg2.png);
             background-size: contain;
             background-repeat: no-repeat;
@@ -619,8 +637,8 @@
 
 
         .btnSection {
-            padding-top: 50px;
-            padding-bottom: 60px;
+            padding-top: 20px;
+            padding-bottom: 80px;
             background-image: url(https://static-public.pages.hotmart.com/uploads/media/file/8954000/stairssection.png);
             background-size: contain;
             background-repeat: no-repeat;
@@ -639,7 +657,7 @@
             background-position: right;
             overflow: hidden;
             position: relative;
-            padding: 4rem 0 6rem 0;
+            padding: 4rem 0 4rem 0;
         }
 
         .estatuaImg {
@@ -859,6 +877,7 @@
         @media (max-width: 990px) {
             .precosContainer {
                 padding: 15px;
+                padding-bottom: 2rem;
             }
 
         }
@@ -1099,7 +1118,8 @@
 
         /* Event Hightlights */
         .eventHighlightsContainer .container {
-            padding: 2rem 0;
+
+            padding: 4rem 0;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -1135,30 +1155,107 @@
         }
 
         .row-socios {
+            min-height: 160px;
+            margin: 1rem 0;
+            padding: 1rem 0;
             display: flex;
+            align-items: center;
             flex-wrap: wrap;
             justify-content: space-around;
+            border-radius: 1rem;
+            border: solid 3px rgba(255, 255, 255, 0.2);
         }
 
         .row-socios div {
+            padding: 2rem 0;
             min-width: 250px;
+        }
+
+        .row-socios_platinum {
+
+            background-image: repeating-linear-gradient(to right, rgb(192, 187, 176) 0%, #727271 25%, #86827b 50%, #6d6864 100%);
+            background-color: rgba(0, 0, 0, 0.4);
+
+            background: linear-gradient(rgb(38, 41, 45), rgb(22, 23, 24)) padding-box, linear-gradient(to right, rgb(104, 101, 94) 0%, #383838 25%, #d8cfbe 50%, #65615f 75%, #c5b3a7 100%) border-box;
+            /* background-blend-mode: darken; */
+        }
+
+        .row-socios_gold {
+            background-image: repeating-linear-gradient(to right, #a2682a 0%, #cfc681 35%, #d2b670 50%, #bb8332 83%, #a4692a 100%);
+            background-color: rgba(140, 72, 0, 0.4);
+
+            /* background-blend-mode: darken; */
+            background: linear-gradient(rgb(32, 21, 2), rgb(27, 26, 22)) padding-box, linear-gradient(to right, #a2682a 0%, #cfc681 35%, #d2b670 50%, #bb8332 83%, #a4692a 100%) border-box;
+
+        }
+
+        .row-socios_silver {
+            background-image: repeating-linear-gradient(to right, #686766 0%, #c0c0c0 25%, #a3a3a3 50%, #cecece 78%, #575757 100%);
+            background-color: rgba(0, 0, 0, 0.9);
+            background-blend-mode: darken;
+        }
+
+        .agenda-custom-card {
+            background: rgba(32, 32, 32, 0.9);
+            border: 1px solid rgba(161, 161, 161, 0.532);
+            border-radius: .5rem;
+            box-shadow: 0 8px 25px rgba(115, 115, 115, 0.205);
+            overflow: hidden;
+
+        }
+
+        .agenda-custom-card-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+            padding: 0.75rem 1.25rem;
+        }
+
+        .agenda-custom-table td {
+            padding: .8rem .5rem 1rem 0;
+            line-height: 1.4;
+            font-size: .95rem;
+            color: #ffffff;
+
+            vertical-align: middle;
+        }
+
+        .agenda-custom-table tbody tr:not(:last-child) td {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.114);
+        }
+
+        .agenda-custom-table tbody tr td:nth-of-type(2n) {
+
+            width: 35%;
+        }
+
+        .agenda-time {
+            font-size: 1.1em;
+            padding-right: 0.5rem;
+        }
+
+        .speaker-link {
+            font-weight: 500;
+            text-decoration: underline;
+            color: #e9f9ff;
+            /* Example blue - choose your desired color */
         }
     </style>
 
-    <div class="nav-bar container g-0 ">
+    <div class="nav-bar_container">
+        <div class="nav-bar container g-0 ">
 
-        <a class="nav-button textFontRegulare" href="#speakers">
-            Ponentes
-        </a>
+            <a class="nav-button textFontRegulare" href="#speakers">
+                Ponentes
+            </a>
 
-        <a class="nav-button nav-button--filled textFontRegulare" href="#tickets">
-            Entradas
-        </a>
+            <a class="nav-button nav-button--filled textFontRegulare" href="#agenda">
+                Agenda
+            </a>
 
 
+
+        </div>
 
     </div>
-
 
     <div class="containerLetreiro">
         <div class="horizontal-scrolling-items">
@@ -1207,7 +1304,7 @@
 
 
         <img src="https://static-public.pages.hotmart.com/uploads/media/file/8954136/escadaheader.png"
-            class="escadaHeader" />
+            class="escadaHeader" draggable="false" />
 
 
 
@@ -1221,7 +1318,7 @@
                         style=" margin-bottom: 2rem; font-size: 1.2rem; letter-spacing: .15rem; line-height: 1.2;">20 Y
                         21
                         DE JUNIO DE 2025<br>
-                        <span class="textFontLight">CDMX | QUARRY STUDIOS</span>
+                        <span class="textFontLight">CDMX | <a href="#location">QUARRY STUDIOS</a></span>
                     </p>
 
 
@@ -1237,21 +1334,22 @@
 
                     <div class="buy-button-container">
                         <a style="margin-top: 1rem; width: fit-content;"
-                            href="https://pay.hotmart.com/W93859114U?off=rscii5bg&checkoutMode=10" target="_blank">
+                            href="https://pay.hotmart.com/W93859114U?off=cni47xmv&checkoutMode=10" target="_blank">
                             <button class="textFontBlack btnStyle1" id="anchorPointPrecios2">QUIERO MI BOLETO</button>
                         </a>
                     </div>
 
                 </div>
 
-                <div class=" col-md-4 d-flex justify-content-center align-items-center flex-column header__logo-and-countdown"
-                    style="">
+                <div
+                    class=" col-md-4 d-flex justify-content-center align-items-center flex-column header__logo-and-countdown">
 
                     <div class="row justify-content-center">
                         <div class=" text-center">
 
                             <img class="imgHeader"
-                                src="https://static-public.pages.hotmart.com/uploads/media/file/8953993/logohero.png" />
+                                src="https://static-public.pages.hotmart.com/uploads/media/file/8953993/logohero.png"
+                                draggable="false" />
                         </div>
                     </div>
 
@@ -1307,178 +1405,14 @@
 
     </div>
 
-
-    <!-- About Fire -->
-    <div class="about-container ">
-        <div class="container">
-            <div class="row d-flex justify-content-center text-center">
-                <h2 class="textFontBold">
-                    Desde hace 10 años, somos el festival <br> que transforma el mercado digital.
-                </h2>
-            </div>
-            <div class="row d-flex justify-content-between gx-5 gy-5">
-
-                <div class="col-lg-3">
-                    <div class=" about__card">
-                        <div class="about__card__logo">
-                            <span class="material-symbols-rounded">
-                                event
-                            </span>
-                        </div>
-                        <h3 class="textFontBolde">
-                            2 días
-                        </h3>
-
-                        <p class="textFontBook">
-                            De inmersión con mucho conocimiento y networking.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class=" about__card">
-                        <div class="about__card__logo">
-
-                            <span class="material-symbols-rounded">
-                                groups_2
-                            </span>
-                        </div>
-                        <h3 class="textFontBolde">
-                            +2000
-                        </h3>
-
-                        <p class="textFontBook">
-                            Participantes de México y de todo el mundo.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class=" about__card">
-                        <div class="about__card__logo">
-                            <span class="material-symbols-rounded">
-                                stars
-                            </span>
-                        </div>
-                        <h3 class="textFontBolde">
-                            Más de 30
-                        </h3>
-
-                        <p class="textFontBook">
-                            Expertos que están revolucionando el mercado digital.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <div class=" about__card">
-                        <div class="about__card__logo">
-                            <span class="material-symbols-rounded">
-                                hourglass_empty
-                            </span>
-                        </div>
-                        <h3 class="textFontBolde">
-                            +20 horas
-                        </h3>
-
-                        <p class="textFontBook">
-                            De contenido con ideas y metodologías para tu negocio.
-                        </p>
-                    </div>
-                </div>
+    <div class="headliner-container" id="speakers" style="background-color: #202020; padding: 4rem 0 2rem 0; ">
 
 
 
-            </div>
-        </div>
+        <!-- MARGARITA HEADLINER -->
+        <div class="container" style="z-index: 10;">
 
-        <div class="row mt-5 ">
-            <div class="col-md-12 text-center">
-                <a href="https://pay.hotmart.com/W93859114U?off=rscii5bg&checkoutMode=10" target="_blank">
-                    <button class="textFontBlack btnStyle1" id="anchorPointPrecios2">QUIERO MI BOLETO</button>
-                </a>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Tickets -->
-    <div id="tickets" class="precosContainer">
-        <div class="container">
-            <div class="row justify-content-around">
-                <div class="col-md-3 framePriceSide">
-                    <div class="col-md-12 text-center">
-                        <br>
-                        <p class="textFontBlack" style="font-size: 2rem; color: #8e8e8e; margin-bottom: 0px;">
-                            EARLY<br>FLAME</p>
-                        <br><br>
-                        <p class="textFontBlack"
-                            style="font-size: 25px; color: white; margin-bottom: 0px; background-color: #8e8e8e; padding: 20px; ">
-                            SOLD OUT</p>
-                    </div>
-                </div>
-                <div class="col-md-4 framePriceSide" style=" border: 2px solid white;">
-                    <div class="col-md-12 text-center">
-                        <p class="textFontBlack" style="font-size: 3rem;     -webkit-text-fill-color: transparent;
-                        background: linear-gradient(45deg, var(--red), var(--orange));
-                        background-clip: text; margin-bottom: 0;">HOT
-                            TICKETS</p>
-
-                        <ul class="textFontLight">
-                            <li>Entrada para los 2 días</li>
-                            <li>Welcome Kit</li>
-                            <li>Acceso completo a todas las conferencias en el escenario principal</li>
-                            <li>Acceso al Fun Zone y al Food Park</li>
-                            <li>Fiesta de clausura</li>
-                            <li>Certificado de participación al evento</li>
-                            <li>2 días de Networking con líderes de toda la región</li>
-                            <li>20% de descuento en la Hotmart Store</li>
-                            <li>Cobertura fotográfica del evento</li>
-                            <li>Estacionamiento gratuito para los 2 días</li>
-                            <li>Acceso a área de stands con compañías regionales</li>
-                        </ul>
-
-
-                        <a href="https://pay.hotmart.com/W93859114U?off=rscii5bg&checkoutMode=10" target="_blank">
-                            <p class="textFontBlack"
-                                style="font-size: 45px; color: white; margin-bottom: 0px; user-select: none; background-color: #8e8e8e; padding: 20px; background:linear-gradient(55deg, var(--red), var(--orange)); border-top: 2px solid white;">
-                                $197 USD</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 framePriceSide">
-                    <div class="col-md-12 text-center">
-                        <br>
-                        <p class="textFontBlack" style="font-size: 2rem; color: #8e8e8e; margin-bottom: 0px;">
-                            FINAL<br>HOT TICKETS</p>
-                        <br><br>
-                        <p class="textFontBlack"
-                            style="font-size: 25px; color: white; margin-bottom: 0px; background-color: #8e8e8e; padding: 20px;">
-                            <span style="filter: blur(5px); user-select: none;">$ !-! USD</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <a href="https://pay.hotmart.com/W93859114U?off=rscii5bg&checkoutMode=10" target="_blank">
-                        <button class="textFontBlack btnStyle2">COMPRAR AHORA</button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div id="speakers" class="destaqueContainer">
-
-        <div class="container">
-
-
-
-
-            <div class="row">
+            <div class="row" style="    position: relative;">
                 <div class="col-md-12" style="text-transform: uppercase;">
                     <div style="display: flex; justify-content: center;">
                         <h2 class="textFontRegulare titleSection">Los creadores digitales
@@ -1497,6 +1431,128 @@
                 </div>
             </div>
             <br>
+            <br>
+
+
+            <div class="row d-flex justify-content-center gx-4 gy-5">
+
+                <div class="col-lg-6">
+
+
+                    <div class=" about__card"
+                        style="padding: 0; height: auto; border: none; background: transparent; border-radius: 0;">
+                        <!-- MARGARITA -->
+
+                        <div class="card__content" style="width: 100%; margin: 0;">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9447922/margarita_main_card_large.jpg"
+                                    style="object-position: top center;">
+                            </div>
+
+                            <div class="card__body" style="overflow: hidden;">
+
+                                <div class="containerLetreiro" style="background-color: #ffffff2f; 
+                                    position: absolute; 
+                                    right: 0px; 
+                                    border-image: none; 
+                                    border-radius: 0; 
+                                    border-bottom: white solid 1px; 
+                                    padding: .4rem 0; 
+                                    user-select: none;">
+                                    <div class="horizontal-scrolling-items">
+                                        <div class="horizontal-scrolling-items__item textFontBlack">
+
+                                            • HEADLINER • HEADLINER
+
+
+                                        </div>
+
+                                        <div class="horizontal-scrolling-items__item textFontBlack">
+
+                                            • HEADLINER • HEADLINER
+
+                                        </div>
+
+                                        <div class="horizontal-scrolling-items__item textFontBlack">
+
+                                            • HEADLINER • HEADLINER
+
+                                        </div>
+
+                                        <div class="horizontal-scrolling-items__item textFontBlack">
+
+                                            • HEADLINER • HEADLINER
+
+                                        </div>
+
+                                        <div class="horizontal-scrolling-items__item textFontBlack">
+
+                                            • HEADLINER • HEADLINER
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <img class="card__flag" style="box-shadow: #00000041 0px 2px 15px; top: 3rem;"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162147/flag-colombia.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Ponente Principal</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack"
+                                        style="text-align: left; font-size: 2.5rem; margin: 1rem 0 0 0rem;">
+                                        MARGARITA PASOS</h3>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="about-container__info-section textFontRegulare"
+                        style="    position: relative; background-color: #61616141; border-radius: 1rem; overflow: hidden; height: 100%; padding: 1.5rem;">
+
+                        <h4 class="text-pink textFontBold"
+                            style="font-size: 1.6rem; margin: -1.5rem -1.5rem 0 -1.5rem ; padding: .5rem 1.5rem; line-height: 1.2;">
+                            Cierra el
+                            evento con la ponencia más esperada.</h4>
+                        <br>
+                        <p>Una de las
+                            mentoras más influyentes en ventas, liderazgo y
+                            crecimiento de negocios en el mundo hispano. <br> <br>Con más de <strong>30 años de
+                                experiencia</strong>, ha
+                            transformado la vida de miles de emprendedores y empresas, ayudándolos a escalar con
+                            claridad, estrategia y enfoque en resultados.</p>
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="destaqueContainer">
+
+        <div class="container">
+
             <div class="cards-container">
                 <div class="cards-list">
 
@@ -1563,6 +1619,38 @@
                         </div>
                     </div>
 
+                    <!-- edmundo -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9257034/edmundo_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162146/flag-mexico.png"
+                                    alt="Flag Mexico">
+                                <a class="card__moreinfo">Desarrollo personal</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+
+                                    <h3 class="card__title textFontBlack">Dr. Edmundo</h3>
+                                    <span class="card__subtitle textFontRegulare">
+                                        Domina técnicas para comunicar, negociar y liderar con impacto.
+                                        Conoce los patrones mentales que impulsan el éxito personal y profesional.
+
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
                     <!-- melisa -->
                     <div class="speaker-card">
                         <div class="card__content">
@@ -1605,18 +1693,19 @@
                             </div>
 
                             <div class="card__body">
-                                
+
                                 <img class="card__flag"
-                                src="https://static-public.pages.hotmart.com/uploads/media/file/9162147/flag-colombia.png"
-                                alt="Flag Colombia">
-                            
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162147/flag-colombia.png"
+                                    alt="Flag Colombia">
+
                                 <a class="card__moreinfo">Negocios Digitales</a>
                                 <div class="card__meta-data">
                                     <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
                                     <h3 class="card__title textFontBlack">Álvaro Luque</h3>
-                                    <span class="card__subtitle textFontRegulare">No solo vendas, crea un sistema de
-                                        ingresos constantes. Aprende estrategias probadas para escalar y monetizar tu
-                                        negocio digital.
+                                    <span class="card__subtitle textFontRegulare">Construye un sistema de ingresos
+                                        constantes con tu negocio digital. Estrategias probadas para escalar, monetizar
+                                        y crecer sin depender solo de las ventas puntuales.
+
                                     </span>
                                 </div>
 
@@ -1764,7 +1853,7 @@
 
                             <div class="card__body">
                                 <img class="card__flag"
-                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162147/flag-colombia.png"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9257563/flag-argentina.png"
                                     alt="Flag Colombia">
                                 <a class="card__moreinfo">Emprendimiento</a>
                                 <div class="card__meta-data">
@@ -1781,6 +1870,40 @@
                         </div>
                     </div>
 
+                    <!-- joao  -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9257033/joao_card_.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162145/flag-brazil.png"
+                                    alt="Flag Brazil">
+                                <a class="card__moreinfo">CEO de Hotmart</a>
+                                <div class="card__meta-data">
+
+                                    <h3 class="card__title textFontBlack">João Pedro Resende</h3>
+
+                                    <span class="card__subtitle textFontRegulare">Aprende cómo construir y liderar una
+                                        empresa global en la Creator Economy. Claves para escalar, innovar y transformar
+                                        tu pasión en un negocio sostenible.
+
+
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
                     <!-- Alejandro -->
                     <div class="speaker-card">
                         <div class="card__content">
@@ -1794,8 +1917,8 @@
 
                             <div class="card__body">
                                 <img class="card__flag"
-                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162147/flag-colombia.png"
-                                    alt="Flag Colombia">
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9257563/flag-argentina.png"
+                                    alt="Flag Argentina">
                                 <a class="card__moreinfo">Automatización</a>
                                 <div class="card__meta-data">
                                     <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
@@ -1810,8 +1933,7 @@
                         </div>
                     </div>
 
-
-                    <!-- Eduardo Vázquez -->
+                    <!-- yesid -->
                     <div class="speaker-card">
                         <div class="card__content">
 
@@ -1819,20 +1941,170 @@
 
                             <div class="card__image">
                                 <img class="stick-flag" loading="lazy"
-                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9165650/eduardo_card_.jpg">
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9257521/yesid_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162147/flag-colombia.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Negocios Digitales</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">Yesid Vega</h3>
+                                    <span class="card__subtitle textFontRegulare">Crea ecosistemas
+                                        digitales rentables, desarrolla activos y escala tu conocimiento a
+                                        través de la educación online en múltiples idiomas.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- rodrigo -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9375610/rodrigo_card_copy.jpg">
                             </div>
 
                             <div class="card__body">
                                 <img class="card__flag"
                                     src="https://static-public.pages.hotmart.com/uploads/media/file/9162146/flag-mexico.png"
-                                    alt="Flag Mexico">
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Transformación</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">Rodrigo Garduño</h3>
+                                    <span class="card__subtitle textFontRegulare">Construye una mentalidad
+                                        inquebrantable, desarrolla hábitos de alto rendimiento y crea comunidades
+                                        poderosas.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- enrique -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9375608/enrique_card_copy.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9375649/flag-spain.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Coaching y PNL</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">Enrique Jurado</h3>
+                                    <span class="card__subtitle textFontRegulare">Aprende herramientas avanzadas de PNL,
+                                        inteligencia emocional y liderazgo consciente para potenciar tu impacto personal
+                                        y profesional.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- oscar -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9375609/oscar_card__copy.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162147/flag-colombia.png"
+                                    alt="Flag Colombia">
                                 <a class="card__moreinfo">Inteligencia Artificial</a>
                                 <div class="card__meta-data">
                                     <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
-                                    <h3 class="card__title textFontBlack">Eduardo Vázquez</h3>
-                                    <span class="card__subtitle textFontRegulare">Activa la Inteligencia Artificial en
-                                        tu estrategia y desbloquea nuevas oportunidades de crecimiento para alcanzar tu
-                                        máximo potencial.
+                                    <h3 class="card__title textFontBlack">Oscar Martan</h3>
+                                    <span class="card__subtitle textFontRegulare">Aplica la inteligencia artificial
+                                        para automatizar procesos, escalar tu negocio y liberar tiempo para enfocarte en
+                                        lo esencial.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- jania -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9447623/jania_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162146/flag-mexico.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Negocios en TikTok</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">JANIA ALEMÁN</h3>
+                                    <span class="card__subtitle textFontRegulare">Convierte tu creatividad en ventas y
+                                        aprende a captar leads con estrategias probadas en TikTok for Business.
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- jp zuluaga -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9444305/juan_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162147/flag-colombia.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo"> Educación Financiera</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">JUAN PABLO ZULUAGA</h3>
+                                    <span class="card__subtitle textFontRegulare"> Elige el modelo ideal para escalar tu
+                                        negocio con el cofundador de Mis Propias Finanzas, la comunidad
+                                        financiera más grande de LATAM.
+
 
                                 </div>
 
@@ -1842,7 +2114,301 @@
                     </div>
 
 
-                    <!-- Porximamente -->
+                    <!-- diego -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9447622/diego_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162146/flag-mexico.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Negocios con IA</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">DIEGO CAMACHO</h3>
+                                    <span class="card__subtitle textFontRegulare">Aprende a potenciar tu negocio con
+                                        inteligencia artificial, escalar con visión global y liderar con impacto real en
+                                        el mundo digital.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- andrea -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9444299/andrea_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162146/flag-mexico.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Escalabilidad</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack"> ANDREA ROJAS</h3>
+                                    <span class="card__subtitle textFontRegulare">Escala de 0 a 100K con la creadora de
+                                        la Fórmula Ventas Diarias, el método con más casos de éxito en la región.
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- marcelo -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9444303/marcelo_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162145/flag-brazil.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Automatización</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">MARCELO TÁVORA</h3>
+                                    <span class="card__subtitle textFontRegulare">Usa la IA para automatizar, escalar y
+                                        convertir datos en crecimiento real con el fundador de VK y experto en
+                                        lanzamientos.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9491279/karla_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162146/flag-mexico.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Marketing</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">KARLA BERMAN</h3>
+                                    <span class="card__subtitle textFontRegulare">Piensa como una líder de alto impacto,
+                                        vende con estrategia y escala tu negocio al estilo de las empresas más exitosas
+                                        de LATAM.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Bruno -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9491274/bruno_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162145/flag-brazil.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Automatización</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">BRUNO CASTAÑOLA</h3>
+                                    <span class="card__subtitle textFontRegulare">Atrae más leads, automatiza tus ventas
+                                        y escala resultados con estrategias reales de alto rendimiento.
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Daniel -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9491272/daniel_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9375649/flag-spain.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Lanzamientos Digitales</a>
+                                <div class="card__meta-data">
+                                    <h3 class="card__title textFontBlack">DANIEL SCHEPERS</h3>
+                                    <span class="card__subtitle textFontRegulare">Lanza tu infoproducto con estrategia
+                                        realista y factura +10K sin humo ni promesas vacías.
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Jose -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9491273/jose_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162146/flag-mexico.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Negocios Digitales</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">JOSÉ MANUEL MORALES</h3>
+                                    <span class="card__subtitle textFontRegulare">Convierte tu conocimiento en un
+                                        negocio digital rentable: del primer curso a una agencia que escala.
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Tania -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9491277/tania_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162146/flag-mexico.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Espiritualidad</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">TANIA KARAM</h3>
+                                    <span class="card__subtitle textFontRegulare">Activa tu abundancia emocional y
+                                        financiera integrando propósito y conciencia a tu vida y negocio.
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Steven -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9491278/steven_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9491351/flag-costa-rica.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Finanzas Personales</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">STEVEN ZAMORA</h3>
+                                    <span class="card__subtitle textFontRegulare">Ordena tus finanzas, sal de deudas y
+                                        empieza a invertir en la Bolsa de EE.UU. sin ser experto.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- maca -->
+                    <div class="speaker-card">
+                        <div class="card__content">
+
+                            <div class="card__gloss"></div>
+
+                            <div class="card__image">
+                                <img class="stick-flag" loading="lazy"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9520020/maca_card.jpg">
+                            </div>
+
+                            <div class="card__body">
+                                <img class="card__flag"
+                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162146/flag-mexico.png"
+                                    alt="Flag Colombia">
+                                <a class="card__moreinfo">Finanzas</a>
+                                <div class="card__meta-data">
+                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                                    <h3 class="card__title textFontBlack">MACA RIVA</h3>
+                                    <span class="card__subtitle textFontRegulare">Descubre cómo las empresas que dominan
+                                        el mundo también pueden ser parte de tu historia.
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- Proximamente 
                     <div class="speaker-card">
                         <div class="card__content">
 
@@ -1854,21 +2420,20 @@
                             </div>
 
                             <div class="card__body">
-                                <!-- <img class="card__flag"
-                                    src="https://static-public.pages.hotmart.com/uploads/media/file/9162147/flag-colombia.png"
-                                    alt="Flag Colombia"> -->
+               
                                 <a class="card__moreinfo">Creadores</a>
                                 <div class="card__meta-data">
-                                    <!-- <span class="card__tag">Desenvolvimento Pessoal</span> -->
+                               
                                     <h3 class="card__title textFontBlack">Próximamente</h3>
-                                    <span class="card__subtitle textFontRegulare">Más mentes brillantes se suman al escenario. ¡Mantente atento y no te lo pierdas!
+                                    <span class="card__subtitle textFontRegulare">Más mentes brillantes se suman al
+                                        escenario. ¡Mantente atento y no te lo pierdas!
                                 </div>
 
                             </div>
 
                         </div>
                     </div>
-
+  -->
 
 
 
@@ -1886,7 +2451,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <a href="https://pay.hotmart.com/W93859114U?off=rscii5bg&checkoutMode=10" target="_blank">
+                    <a href="https://pay.hotmart.com/W93859114U?off=cni47xmv&checkoutMode=10" target="_blank">
                         <button class="textFontBlack btnStyle1" id="anchorPointPrecios1">QUIERO MI BOLETO</button>
                     </a>
                 </div>
@@ -1894,13 +2459,173 @@
         </div>
     </div>
 
+
+    <!-- About Fire -->
+    <div class="about-container ">
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                <h2 class="textFontBold">
+                    Desde hace 10 años, somos el festival <br> que transforma el mercado digital.
+                </h2>
+            </div>
+            <div class="row d-flex justify-content-between gx-5 gy-5">
+
+                <div class="col-lg-3">
+                    <div class=" about__card">
+                        <div class="about__card__logo">
+                            <span class="material-symbols-rounded">
+                                event
+                            </span>
+                        </div>
+                        <h3 class="textFontBolde">
+                            2 días
+                        </h3>
+
+                        <p class="textFontBook">
+                            De inmersión con mucho conocimiento y networking.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class=" about__card">
+                        <div class="about__card__logo">
+
+                            <span class="material-symbols-rounded">
+                                groups_2
+                            </span>
+                        </div>
+                        <h3 class="textFontBolde">
+                            +2000
+                        </h3>
+
+                        <p class="textFontBook">
+                            Participantes de México y de todo el mundo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class=" about__card">
+                        <div class="about__card__logo">
+                            <span class="material-symbols-rounded">
+                                stars
+                            </span>
+                        </div>
+                        <h3 class="textFontBolde">
+                            Más de 30
+                        </h3>
+
+                        <p class="textFontBook">
+                            Expertos que están revolucionando el mercado digital.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class=" about__card">
+                        <div class="about__card__logo">
+                            <span class="material-symbols-rounded">
+                                hourglass_empty
+                            </span>
+                        </div>
+                        <h3 class="textFontBolde">
+                            +20 horas
+                        </h3>
+
+                        <p class="textFontBook">
+                            De contenido con ideas y metodologías para tu negocio.
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Tickets -->
+    <div id="tickets" class="precosContainer">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-md-3 framePriceSide">
+                    <div class="col-md-12 text-center">
+                        <br>
+                        <p class="textFontBlack" style="font-size: 2rem; color: #8e8e8e; margin-bottom: 0px;">
+                            EARLY<br>FLAME</p>
+                        <br><br>
+                        <p class="textFontBlack"
+                            style="font-size: 25px; color: white; margin-bottom: 0px; background-color: #8e8e8e; padding: 20px; ">
+                            SOLD OUT</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 framePriceSide">
+                    <div class="col-md-12 text-center">
+                        <br>
+                        <p class="textFontBlack" style="font-size: 2rem; color: #8e8e8e; margin-bottom: 0px;">
+                            HOT <br> TICKETS</p>
+                        <br><br>
+                        <p class="textFontBlack"
+                            style="font-size: 25px; color: white; margin-bottom: 0px; background-color: #8e8e8e; padding: 20px;">
+                            <span style=" user-select: none;">SOLD OUT</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 framePriceSide" style=" border: 2px solid white;">
+                    <div class="col-md-12 text-center">
+                        <p class="textFontBlack" style="font-size: 3rem; margin: 0 1rem;    -webkit-text-fill-color: transparent;
+                        background: linear-gradient(45deg, var(--red), var(--orange));
+                        background-clip: text; margin-bottom: 0;">FINAL HOT
+                            TICKETS</p>
+
+                        <ul class="textFontLight">
+                            <li>Entrada para los 2 días</li>
+                            <li>Welcome Kit</li>
+                            <li>Acceso completo a todas las conferencias en el escenario principal</li>
+                            <li>Acceso al Fun Zone y al Food Park</li>
+                            <li>Fiesta de clausura</li>
+                            <li>Certificado de participación al evento</li>
+                            <li>2 días de Networking con líderes de toda la región</li>
+                            <li>20% de descuento en la Hotmart Store</li>
+                            <li>Cobertura fotográfica del evento</li>
+                            <li>Estacionamiento gratuito para los 2 días</li>
+                            <li>Acceso a área de stands con compañías regionales</li>
+                        </ul>
+
+
+                        <a href="https://pay.hotmart.com/W93859114U?off=cni47xmv&checkoutMode=10" target="_blank">
+                            <p class="textFontBlack"
+                                style="font-size: 45px; color: white; margin-bottom: 0px; user-select: none; background-color: #8e8e8e; padding: 20px; background:linear-gradient(55deg, var(--red), var(--orange)); border-top: 2px solid white;">
+                                $227 USD</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center ">
+                    <a href="https://pay.hotmart.com/W93859114U?off=cni47xmv&checkoutMode=10" target="_blank">
+                        <button class="textFontBlack btnStyle2">COMPRAR AHORA</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     <div class="palestrantesContainer eventHighlightsContainer">
 
         <div class="container">
 
             <div class="row" style="width: 100%;">
 
-                <div class="col-md-12" style="margin: 3.2rem 0 1rem 0; width: 100%;">
+                <div class="col-md-12" style="margin: 0rem 0 1rem 0; width: 100%;">
                     <div style="display: flex; justify-content: center; text-transform: uppercase;"
                         class="d-none d-sm-flex">
                         <h2 class="textFontRegulare titleSection"> DESCUBRE lo que vivirás </h2>
@@ -1961,7 +2686,7 @@
                             </div>
                             <div class="card__body">
                                 <span class="card__subtitle textFontRegulare"><strong>Fun Zone</strong> con experiencias
-                                    épicas para conectar.
+                                    épicas para conectar
                                 </span>
                             </div>
 
@@ -1991,7 +2716,7 @@
                             </div>
                             <div class="card__body">
                                 <span class="card__subtitle textFontRegulare"><strong>Food Court</strong> para recargar
-                                    energías y seguir disfrutando.</span>
+                                    energías y seguir disfrutando</span>
                             </div>
 
                         </div>
@@ -2068,7 +2793,7 @@
                         position: relative;
                         max-width: 300px;
                         z-index: 1;">Ya tienes un negocio y quieres vender más, te enseñamos como crear una audiencia
-                            para llevar tu negocio al siguiente nivel</p>
+                            para llevar tu negocio al siguiente nivel.</p>
 
                         <img src="https://static-public.pages.hotmart.com/uploads/media/file/9162621/line5.png"
                             class="lineEstatuaMid" />
@@ -2107,7 +2832,7 @@
                             max-width: 300px; 
                             background: var(--red); 
                             font-size: 1.8rem; position: 
-                            relative; z-index: 1;">Actualizate con lo más moderno
+                            relative; z-index: 1;">Actualízate con lo más moderno
 
                         </p>
                         <p class="textFontRegulare" style="    line-height: 1.3;    padding: 1rem;
@@ -2141,8 +2866,435 @@
         </div>
     </div>
 
+    <!--  Fire Location-->
+    <div class="about-container " id="location">
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                <div style="margin-bottom: 2rem; display: flex;  align-items: center; flex-direction: column;">
 
-    <div class="sociosContainer">
+
+                    <h2 class="textFontBold" style="margin-bottom: 1rem; color: var(--pink);">
+                        ¿Dónde será Hotmart Fire Sessions?
+
+                    </h2>
+                    <p class="textFontRegulare" style="max-width: 70ch; font-size: 1.2rem; line-height: 1.2;"> Fire
+                        Sessions México 2025
+                        se vive en el corazón de CDMX. Conéctate con miles de mentes brillantes en un lugar
+                        accesible, vibrante
+                        y listo para inspirarte.
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center gx-4 gy-5">
+
+                <div class="col-lg-5">
+
+
+                    <div class=" about__card" style="padding: 0; overflow: hidden; height: auto; margin-bottom: 2rem;">
+                        <iframe style="width: 100%;" allowfullscreen="" height="360" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2625.472966141647!2d-99.16487229938265!3d19.30384487799309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce005d2bc502df%3A0x948420def2edde0f!2sQUARRY%20STUDIOS!5e1!3m2!1sen!2sco!4v1744322249807!5m2!1sen!2sco"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-5">
+                    <div class="about-container__info-section textFontRegulare">
+                        <a href="https://maps.app.goo.gl/jkanjwSTNzw8xv4MA" target="_blank">
+                            <div style="display: flex; height: fit-content;">
+                                <span class="material-symbols-rounded text-pink"
+                                    style="font-size: 1.7rem; padding: 0 .2rem; line-height: 1.25;">
+                                    location_on
+                                </span>
+                                <h5 class="textFontBold text-pink" style="margin: 0;    padding: 0.5rem;">Consulta el
+                                    mapa y
+                                    planea tu
+                                    llegada</h5>
+                            </div>
+                        </a>
+                        <h4 class="textFontBold "> <br>Hoteles recomendados</h4>
+                        <div style="opacity: .8;">
+
+
+
+                            <p> <strong> En Santa Fe:</strong></p>
+                            <ul>
+                                <li>JW Marriott</li>
+                                <li>Hilton Santa fe</li>
+                                <li>Camino Real</li>
+
+                            </ul>
+
+                            <p><strong>Cerca a Quarry Studios:</strong></p>
+                            <ul>
+                                <li>Holiday Inn Medica Sur</li>
+                                <li>Radisson Perisur</li>
+
+                            </ul>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="row mt-1 ">
+            <div class="col-md-12 text-center">
+                <a href="https://pay.hotmart.com/W93859114U?off=cni47xmv&checkoutMode=10" target="_blank">
+                    <button class="textFontBlack btnStyle1" id="anchorPointPrecios2">QUIERO MI BOLETO</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="estatuaContainer" style="background-size: auto;" id="agenda">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12" style="text-transform: uppercase;">
+                    <div style="display: flex; justify-content: center;">
+                        <h2 style="    margin: 0; padding: 0 1rem;" class="textFontRegulare  text-red">Agenda general
+                        </h2>
+                        <span class="titleSectionImageCircle"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subtitle -->
+            <div class="row mt-4 mb-3">
+                <div class="col-12 text-center">
+                    <p class="textFontRegulare aboutTextDestaquesSecondary" style="color: #ffffff; font-size: 1.1rem;">
+                        Dos días de contenido exclusivo con los mejores creadores digitales de LATAM
+                    </p>
+                </div>
+            </div>
+
+            <!-- Schedule Cards -->
+            <div class="row g-4 justify-content-center">
+                <!-- Friday Schedule -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="card h-100 agenda-custom-card">
+                        <div class="card-header text-center agenda-custom-card-header"
+                            style="background-color: #ef4f24;">
+                            <h4 class="mb-0 textFontBold">VIERNES 20</h4>
+                        </div>
+                        <div class="card-body p-0">
+
+
+                            <table class="table table-borderless agenda-custom-table mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">8:00</td>
+                                        <td class="textFontRegulare">INICIO</td>
+                                        <td class="textFontRegulare"></td>
+                                    </tr>
+                                    <tr style="background-color: #7e7e7e2d;">
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">10:00</td>
+                                        <td class="textFontRegulare">Apertura</td>
+                                        <td class="textFontRegulare"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">10:15</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/jpresen/" target="_blank"
+                                                class="speaker-link">João Pedro Resende</a>
+                                        </td>
+                                        <td class="textFontRegulare">CEO y fundador de Hotmart</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">11:00</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/tittogalvez/" target="_blank"
+                                                class="speaker-link">Titto Galvez</a>
+                                        </td>
+                                        <td class="textFontRegulare">Fundador de Academia de emprendimiento Libersity
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">11:45</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/brandcoaching/" target="_blank"
+                                                class="speaker-link">Enrique Jurado</a>
+                                        </td>
+                                        <td class="textFontRegulare">CEO y Fundador de D’Arte Human & Business School
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">12:45</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/karlitaberman/" target="_blank"
+                                                class="speaker-link">Karla Berman</a>
+                                        </td>
+                                        <td class="textFontRegulare">Emprendedora, Inversionista y Shark Tank México
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">13:25</td>
+                                        <td class="textFontRegulare">Panel: <strong>Sin Fronteras: Cómo escalar tu
+                                                negocio digital al mundo</strong></td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/tania_karam_oficial/" target="_blank"
+                                                class="speaker-link">Tania Karam MX</a><br>
+                                            <a href="https://www.instagram.com/yevela_89/" target="_blank"
+                                                class="speaker-link">Yesid Vega CO</a><br>
+                                            <a href="https://www.instagram.com/danischepers/" target="_blank"
+                                                class="speaker-link">Daniel Schepers ES</a><br>
+                                            <a href="https://www.instagram.com/elbrunocastanola/" target="_blank"
+                                                class="speaker-link">Bruno Castañola BR</a>
+                                        </td>
+                                    </tr>
+                                    <tr style="background-color: #7e7e7e2d;">
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">14:05</td>
+                                        <td class="textFontRegulare">BREAK</td>
+                                        <td class="textFontRegulare"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">14:40</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/marcosrazzetti/" target="_blank"
+                                                class="speaker-link">Marcos Razzetti</a>
+                                        </td>
+                                        <td class="textFontRegulare">Fundador de BlueHackers</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">15:15</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/juanlombana/" target="_blank"
+                                                class="speaker-link">Juan Lombana</a>
+                                        </td>
+                                        <td class="textFontRegulare">Fundador de Mercatitlán</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">15:45</td>
+                                        <td class="textFontRegulare">Panel: <strong>Negocios inteligentes: El poder real
+                                                de la IA en tu estrategia digital</strong></td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/edmundopnl/" target="_blank"
+                                                class="speaker-link">Dr Edmundo MX</a><br>
+                                            Oscar Martán CO<br>
+                                            Diego Camacho (Google)<br>
+                                            <a href="https://www.instagram.com/marceloatavora/" target="_blank"
+                                                class="speaker-link">Marcelo Tavora BR</a><br>
+                                            Gabriel Lages (Hotmart)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">16:30</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/alejandrosanchez.lat/" target="_blank"
+                                                class="speaker-link">Alejandro Sánchez</a>
+                                        </td>
+                                        <td class="textFontRegulare">Fundador y CEO de <a
+                                                href="https://www.instagram.com/funnelchat/" target="_blank"
+                                                class="speaker-link">Funnelchat</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">17:10</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/marketingconmelissa/" target="_blank"
+                                                class="speaker-link">Melissa Arria</a>
+                                        </td>
+                                        <td class="textFontRegulare">Fundadora de Marketing con Melissa</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">17:45</td>
+                                        <td class="textFontRegulare">
+                                            Felipe Braga y Fernanda Sujto
+                                        </td>
+                                        <td class="textFontRegulare">
+                                            Felipe: Product Director en Hotmart<br>
+                                            Fernanda: Gerente Senior de Product Marketing en Hotmart
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">18:15</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/osotrava/" target="_blank"
+                                                class="speaker-link">Oso Trava</a>
+                                        </td>
+                                        <td class="textFontRegulare">Creador y fundador de Cracks Fund</td>
+                                    </tr>
+                                    <tr style="background-color: #7e7e7e2d;">
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: #ef4f24;">19:00</td>
+                                        <td class="textFontRegulare">CIERRE</td>
+                                        <td class="textFontRegulare"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saturday Schedule -->
+                <div class="col-md-6 col-lg-5">
+                    <div class="card agenda-custom-card">
+                        <div class="card-header text-center agenda-custom-card-header"
+                            style="background-color: var(--clear-red);">
+                            <h4 class="mb-0 textFontBold">SÁBADO 21</h4>
+                        </div>
+                        <div class="card-body p-0">
+
+                            <table class="table table-borderless agenda-custom-table mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">8:00</td>
+                                        <td class="textFontRegulare">INICIO</td>
+                                        <td class="textFontRegulare"></td>
+                                    </tr>
+                                    <tr style="background-color: #7e7e7e2d;">
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">10:00</td>
+                                        <td class="textFontRegulare">Apertura</td>
+                                        <td class="textFontRegulare"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">10:15</td>
+                                        <td class="textFontRegulare">
+                                            Jania Alemán
+                                        </td>
+                                        <td class="textFontRegulare">Líder de Comercial de SMB de TikTok for Business
+                                            LATAM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">10:50</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/ro54d/" target="_blank"
+                                                class="speaker-link">Rodrigo Garduño</a>
+                                        </td>
+                                        <td class="textFontRegulare">Exfutbolista profesional, fundador de 54D</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">11:25</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/vinyloureiro/" target="_blank"
+                                                class="speaker-link">Vinicius Loureiro</a>
+                                        </td>
+                                        <td class="textFontRegulare">CEO de la Agencia B42</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">12:00</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/alvaroluque.co/" target="_blank"
+                                                class="speaker-link">Álvaro Luque</a>
+                                        </td>
+                                        <td class="textFontRegulare">Fundador de Luque Academy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">12:40</td>
+                                        <td class="textFontRegulare">Panel: <strong>Maratón vs. Sprint: Elige tu
+                                                estrategia digital</strong></td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/manuelmoralesmx/" target="_blank"
+                                                class="speaker-link">Juan Manuel Morales MX</a><br>
+                                            <a href="https://www.instagram.com/entrenadorfinanciero.cr/" target="_blank"
+                                                class="speaker-link">Steven Zamora MX</a><br>
+                                            <a href="https://www.instagram.com/andrearojasnet/" target="_blank"
+                                                class="speaker-link">Andrea Rojas MX</a><br>
+                                            <a href="https://www.instagram.com/mispropiasfinanzas/" target="_blank"
+                                                class="speaker-link">Pablo Zuluaga (Mis Propias Finanzas CO)</a>
+                                        </td>
+                                    </tr>
+                                    <tr style="background-color: #7e7e7e2d;">
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">13:20</td>
+                                        <td class="textFontRegulare">BREAK</td>
+                                        <td class="textFontRegulare"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">13:50</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/babruna/" target="_blank"
+                                                class="speaker-link">Bárbara Bruna</a>
+                                        </td>
+                                        <td class="textFontRegulare">Mentora y experta en tráfico pago</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">14:30</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/gustavoduarteq/" target="_blank"
+                                                class="speaker-link">Gustavo Duarte</a>
+                                        </td>
+                                        <td class="textFontRegulare">COO de Kale Anders</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">15:10</td>
+                                        <td class="textFontRegulare">
+                                            <a href="https://www.instagram.com/margaritapasos/" target="_blank"
+                                                class="speaker-link">Margarita Pasos</a>
+                                        </td>
+                                        <td class="textFontRegulare">Coach de Vida y Empresarial</td>
+                                    </tr>
+                                    <tr style="background-color: #7e7e7e2d;">
+                                        <td class="textFontBold text-center agenda-time"
+                                            style="width: 90px; color: var(--clear-red);">17:00</td>
+                                        <td class="textFontRegulare">Closing party</td>
+                                        <td class="textFontRegulare"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <p class="textFontRegulare" style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                        *Los horarios pueden estar sujetos a cambios. Mantente atento a las actualizaciones.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="sociosContainer" style="margin-top: 4rem;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -2153,29 +3305,90 @@
                     </div>
                 </div>
             </div>
-            <br><br><br>
-            <div class="row-socios">
+            <br>
+            <div class="row-socios row-socios_platinum">
+
+
+                <div class=" text-center byw-logo">
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/8953989/funnel_chat.png"
+                        style="width: 100px;" />
+                </div>
+                <div class=" text-center">
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9419092/bluehackers_new.png"
+                        style="width: 180px;" />
+                </div>
+                <div class=" text-center">
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9462593/clint_logo.png"
+                        style="width: 100px;" />
+                </div>
+            </div>
+            <div class="row-socios row-socios_gold">
+
+                <div class=" text-center">
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9113095/exness.png"
+                        style="width: 120px;" />
+                </div>
+
                 <div class=" text-center">
                     <img src="https://static-public.pages.hotmart.com/uploads/media/file/8954164/turbo.png"
-                        style="width: 150px; padding-bottom: 80px;" />
+                        style="width: 130px;" />
                 </div>
                 <div class=" text-center">
                     <img src="https://static-public.pages.hotmart.com/uploads/media/file/8953987/the_perfect_laucnh.png"
-                        style="width: 150px; padding-bottom: 80px;" />
-                </div>
-                <div class=" text-center byw-logo">
-                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/8953989/funnel_chat.png"
-                        style="width: 100px; padding-bottom: 80px;" />
+                        style="width: 150px;" />
                 </div>
                 <div class=" text-center">
-                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/8953992/blue_hackers.png"
-                        style="width: 100px; padding-bottom: 80px;" />
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9462590/blash_logo.png"
+                        style="width: 100px;" />
                 </div>
+
                 <div class=" text-center">
-                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9113095/exness.png"
-                        style="width: 150px; padding-bottom: 80px;" />
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9317463/certiprof-logo.png"
+                        style="width: 180px;" />
                 </div>
             </div>
+            <div class="row-socios row-socios_silver">
+
+                <div class=" text-center">
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9462589/canon_logo.png"
+                        style="width: 120px;" />
+                </div>
+                <div class=" text-center">
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9462592/quarry.png"
+                        style="width: 150px;" />
+                </div>
+                <div class=" text-center">
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9317466/b42-logo.png"
+                        style="width: 30px;" />
+                </div>
+                <div class=" text-center">
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9533745/payoneer_logo.png"
+                        style="width: 170px;" />
+                </div>
+                <div class=" text-center">
+                    <img src="https://static-public.pages.hotmart.com/uploads/media/file/9491284/aea_logo.png"
+                        style="width: 150px;" />
+                </div>
+
+
+            </div>
+
+            <div class="row justify-content-center g-2">
+                <div class="col-md-6">
+                    <div style="display: flex; justify-content: center;">
+                        <p class="textFontRegulare titleSectionDestaque2 text-red">¿Quieres hacer parte de nuestros
+                            aliados?</p>
+                        <span class="titleSectionImageCircle"></span>
+                    </div>
+                    <div class=" text-center ">
+                        <a href="https://hotmart1.typeform.com/to/lTj7tBZM" target="_blank">
+                            <button style="padding: .5rem 1rem; margin: 1rem;" class="textFontBold btnStyle2"
+                                id="anchorPointPrecios2">Regístrate aquí</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -2192,10 +3405,13 @@
                     <div class="d-block d-sm-none" style="margin-bottom: 40px;"></div>
                 </div>
                 <div class="col-12 col-md-6 my-auto text-center text-sm-end">
-                    <a href="https://hotmart.com/es/blog/faq-hotmart-fire-sessions-mexico-2025" target="_blank">
-                        <p class="textFontBlack" style="font-size: 14px; margin-bottom: 6px;">FAQ | Términos y
-                            condiciones</p>
-                    </a>
+
+                    <p class="textFontBlack" style="font-size: 14px; margin-bottom: 6px;"> <a
+                            href="https://hotmart.com/es/blog/faq-hotmart-fire-sessions-mexico-2025" target="_blank">FAQ
+                        </a>| <a href="https://firesessions.hotmart.com/mexico-terminos-y-condiciones"
+                            target="_blank">Términos y
+                            condiciones</a></p>
+
                 </div>
             </div>
         </div>
@@ -2330,11 +3546,11 @@
 
             const innerContainer = container.querySelector('.cards-list');
             innerContainer.style.cssText = `
-                    position: relative;
-                    gap: ${cardsGap}px;
-                    transition: transform 0.3s ease;
-                    user-select: none;
-                `;
+                position: relative;
+                gap: ${cardsGap}px;
+                transition: transform 0.3s ease;
+                user-select: none;
+            `;
             const maxOffset = innerContainer.offsetWidth - container.offsetWidth;
 
             // Create navigation buttons
@@ -2342,19 +3558,19 @@
             const nextBtn = document.createElement('button');
 
             const buttonStyles = `
-        font-family: 'Poppins';
-        font-weight: 400;
-        font-size: 3rem;
-        background: transparent;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: rgb(255, 255, 255);
-        border: none;
-        width: 40px;
-        cursor: pointer;
-        text-shadow: #ffff 0px 0 20px;
-    `;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 3rem;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 40px;
+    cursor: pointer;
+    text-shadow: #ffff 0px 0 20px;
+`;
 
             prevBtn.innerHTML = '<';
             nextBtn.innerHTML = '>';
@@ -2511,8 +3727,8 @@
 
     </script>
 
-
 </body>
+
 
 
 
